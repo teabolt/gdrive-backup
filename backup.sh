@@ -12,7 +12,8 @@ echo "Watcher timer set to: $WATCH_TIMEOUT"
 echo "Watching from list of files in: $WATCH_FILE"
 
 doBackup() {
-    rclone sync --include-from $INCLUDE_FILE \
+    rclone sync \
+           --filter-from $INCLUDE_FILE \
            --create-empty-src-dirs \
            $SRC_STARTDIR $DST_REMOTE:$DST_STARTDIR \
            --drive-chunk-size=256M --transfers=10 --drive-pacer-burst=600 \
