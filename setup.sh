@@ -12,6 +12,8 @@ sudo mkdir /etc/backup
 sudo cp $ENVIRONMENT_FILES /etc/backup
 sudo cp $PRIVATE_FILES /etc/backup
 
+sudo mkdir /etc/backup/logs
+
 sudo cp $SERVICE_UNIT /etc/systemd/system
 
 systemctl daemon-reload
