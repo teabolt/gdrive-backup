@@ -1,0 +1,12 @@
+[Unit]
+Description=Backup script runner
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/backup
+EnvironmentFile=/etc/backup/.config
+EnvironmentFile=/etc/backup/.env
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
