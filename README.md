@@ -46,6 +46,7 @@ Restart with environment variable changes:
 
 ## Linux dependencies
 
+* systemd
+* inotify-tools
 * rclone
     * Need a Google Drive remote set up.
-* inotify-tools
